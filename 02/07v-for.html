@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-for嵌套循环</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+            循环对象：下标是对象的key值
+            循环数组：下标是数组的index
+            循环次数：直接循环的对象就是数字
+         -->
+    </div>  
+    <script>
+        const vm = new Vue({
+            el : "#app",
+            data : {
+                list : [
+                    {
+                        name : "张三",
+                        age : 20
+                    },
+                    {
+                        name : "李四",
+                        age : 30
+                    },
+                    {
+                        name : "王五",
+                        age : 40
+                    }
+                ],
+                students :{
+                    name : "张三",
+                    age : 20
+                }
+            }
+        })
+    </script>
+</body>
+</html>
