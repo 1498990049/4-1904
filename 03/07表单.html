@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="checkbox" v-model="checked" value="A">
+        <input type="checkbox" v-model="checked" value="B">
+        <input type="checkbox" v-model="checked" value="C">
+        <input type="checkbox" v-model="checked" value="D">
+        {{checked}} -->
+        <ul>
+            <li v-for="item in list">
+                <h2>{{item.title}}</h2>
+                <span v-for="child in item.child">
+                    <input type="checkbox" v-bind:value="child" v-model="item.value" />{{child}}
+                </span>
+            </li>
+        </ul>
+        {{list}}
+    </div>
+    <script>
+        const vm = new Vue({
+            el : '#app',
+            data : {
+                // checked : ["A","B","C","D"]
+                list : [
+                    {
+                       title : "1.下面哪种是水果",
+                        value : [],
+                        child : ["苹果","梨","香蕉","汽车"] 
+                    },
+                    {
+                       title : "1.下面哪种是水果",
+                        value : [],
+                        child : ["苹果","梨","香蕉","汽车"] 
+                    }
+                ]
+                    
+                
+            }
+        })
+    </script>
+</body>
+</html>
